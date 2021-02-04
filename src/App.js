@@ -1,7 +1,7 @@
 import react, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Mycomponents from './components/Greet';
+import Greet from './components/Greet';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 
@@ -9,9 +9,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Mycomponents />
-        <Welcome /> */}
-        <Hello />
+        <Greet name="Bruce" heroname="Batman">
+          <p>This is children props</p>
+        </Greet>
+        <Greet name="Clark" heroname="Superman">
+          <button>Actions</button>
+        </Greet>
+        <Greet name="Diana" heroname="Wonder woman" />
+        <Welcome name="Bruce" heroname="Batman" />
+        <Welcome name="Clark" heroname="Superman" />
+        <Welcome name="Diana" heroname="Wonder woman" />
+        {/* <Hello /> */}
       </div>
     );
   }
